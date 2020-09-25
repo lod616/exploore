@@ -1,0 +1,23 @@
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src:
+      url(#{$path}.woff) format("woff"),
+      url(#{$path}.woff2) format("woff2"),
+      url(#{$path}.ttf) format("truetype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+@include font-face('Open Sans', '../fonts/opensans/opensans/opensans', 400, 'normal');
+@include font-face('Open Sans', '../fonts/opensans/opensanslight/opensanslight', 300, 'normal');
+@include font-face('Open Sans', '../fonts/opensans/opensanssemibold/opensanssemibold', 600, 'normal');
+@include font-face('montserrat_regular', '../fonts/montserrat/montserrat-regular', 400, 'normal');
+@include font-face('montserrat_medium', '../fonts/montserrat/montserrat-medium', 500, 'normal');
+@include font-face('montserrat_semibold', '../fonts/montserrat/montserrat-semibold', 600, 'normal');
+@include font-face('montserrat_bold', '../fonts/montserrat/montserrat-bold', 700, 'normal');
+@include font-face('montserrat_black', '../fonts/montserrat/montserrat-black', 900, 'normal');
+@include font-face('lato_regular', '../fonts/lato/Lato-Regular', 400, 'normal');
+@include font-face('lato_medium', '../fonts/lato/Lato-Medium', 500, 'normal');
+@include font-face('lato_medium_italic', '../fonts/lato/Lato-Medium-Italic', 500, 'normal');
+@include font-face('lato_bold', '../fonts/lato/Lato-Bold', 700, 'normal');

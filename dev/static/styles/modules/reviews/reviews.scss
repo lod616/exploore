@@ -1,0 +1,40 @@
+.reviews-s{ 
+    background: center / cover no-repeat url('../images/content/reviews-bg.jpg'); 
+    padding: 80px 15px;
+}
+.reviews{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    &__header{
+        margin-bottom: 60px;
+    }
+    &__descr{
+        width: 100%;
+        max-width: 965px;
+        text-align: center;
+        font-family: 'lato_medium_italic';
+        font-weight: 400;
+        margin-bottom: 30px;
+        color: $white;
+    }
+    &-rating{
+        margin-bottom: 50px;
+    }
+    &-bio{
+        align-items: center;
+        display: flex;
+        & > * {
+            &:not(:last-child) {margin-right: 15px;}}
+        &__info{
+            display: flex;
+            flex-direction: column;
+            letter-spacing: 0.21;
+            &-name{
+                font-family: 'montserrat_black';
+                font-size: 25px;
+            }
+        }
+    }
+}

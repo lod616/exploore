@@ -1,0 +1,94 @@
+.trusted-price-s{
+    background: center / cover no-repeat url('../images/content/trusted-price-bg.jpg');
+    padding: 90px 0 60px 0;
+}
+
+.trusted-price{
+    align-items: center;
+    display: flex;
+    & > * {
+        &:not(:last-child) {
+            margin-right: 40px;
+            @include screen(950px) {
+                margin-right: 0;
+            }
+        }}
+    @include screen(950px) {
+        flex-direction: column;
+    }
+    & > * {
+    margin-bottom: 30px;
+    &:first-child {margin-top: 0;}}
+    &__header{
+        margin-bottom: 60px;
+    }
+}
+.trusted-price__item{
+    align-items: center;
+    background-color: $white;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 385px;
+    padding: 35px 0;
+    & > * {
+    margin-bottom:  25px;
+    &:first-child {margin-top: 0;}
+    &:last-child {margin-bottom: 0;}}
+    &-icon{
+        background: no-repeat url('../images/sprite/sprite.png');
+        display: inline-block;
+        &-wrapper{
+            width: 80px;
+            height: 73px;
+            text-align: center;
+        }
+        &--1{
+            width: 77px;
+            height: 60px;
+        }
+        &--2{
+            background-position-x: -228px;
+            width: 62px;
+            height: 73px;
+        }
+        &--3{
+            background-position: -228px -139px;
+            @include size(57px);
+        }
+    }
+    &-text{
+        font-size: 24px;
+        font-family: 'montserrat_black';
+    }
+    &-cost{
+        background-color: $secondary-color;
+        width: 105%;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 43px;
+        letter-spacing: 0.21px;
+        padding: 12px 0;
+    }
+}
+
+.trusted-price-advantages{
+    & > * {
+    margin-bottom: 10px;
+    &:first-child {margin-top: 0;}
+    &:last-child {margin-bottom: 0;}}
+    &__item{
+        font-family: 'lato_medium';
+        & > * {
+            &:not(:last-child) {margin-right: 15px;}}
+    }
+    &__icon{
+        @include size(16px);
+    }
+    &__text{
+        font-size: 17px;
+        vertical-align: middle;
+    }
+}

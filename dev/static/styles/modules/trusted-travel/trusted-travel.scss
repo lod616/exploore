@@ -1,0 +1,38 @@
+.trusted-travel-s{
+    background: center / cover no-repeat url('../images/content/trusted-travel-bg.jpg');
+    padding: 80px 0;
+}
+
+.trusted-travel{
+    align-items: center;
+    display: flex;
+    @include screen(600px) {
+        flex-direction: column;
+        & > * {
+        margin-bottom: 30px;
+        &:first-child {margin-top: 0;}
+        &:last-child {margin-bottom: 0;}}
+    }
+    & > * {
+        &:not(:last-child) {
+            margin-right: 40px;
+            @include screen(600px) {
+                margin-right: 0;
+            }
+        }}
+    &__header{
+        margin-bottom: 50px;
+    }
+    &__item{
+        padding-bottom: 10px;
+        .item-section__text-descr{
+            max-width: 270px;
+        }
+    }
+    &__btn{
+        @include screen(950px) {
+            max-width: none;
+            border-radius: 0;
+        }
+    }
+}

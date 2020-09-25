@@ -1,0 +1,30 @@
+.btn{
+    border-radius: 10px;
+    background-color: $secondary-color;
+    display: inline-block;
+    width: 100%;
+    max-width: 175px;
+    height: 47px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'montserrat_bold';
+    font-size: 15px;
+    letter-spacing: 0.21px;
+    line-height: 3.20;
+    color: $black;
+}
+
+.btn-big{
+    display: inline-block;
+    width: 100%;
+    max-width: 216px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'montserrat_bold';
+    font-size: 15px;
+    height: 58px;
+    border-radius: 12px;
+    background-color: $secondary-color;
+    color: $black;
+    line-height: 3.80;
+}

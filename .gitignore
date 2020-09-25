@@ -1,0 +1,7 @@
+.DS_store
+package-lock.json
+psd/
+node_modules
+.idea
+/*.exe.stackdump
+.vscode

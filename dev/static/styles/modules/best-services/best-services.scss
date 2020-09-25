@@ -1,0 +1,87 @@
+.best-services-s{
+    padding: 70px 0 30px 0;
+}
+.best-services{
+    display: flex;
+    justify-content: space-between;
+    @include screen(950px) {
+        flex-direction: column;
+    }
+    &__header{
+        margin-bottom: 70px;
+    }
+    &__column{
+        display: flex;
+        flex-direction: column;
+        & > * {
+            margin-bottom: 50px;
+            &:first-child {margin-top: 0;}}
+    }
+    &__item{
+        align-items: center;
+        display: flex;
+        & > * {
+            &:not(:last-child) {margin-right: 60px;}}
+        @include screen(950px) {
+            & > * {
+                &:not(:last-child) {margin-right: 30px;}}
+        }
+    }
+    &__info{
+        width: 100%;
+        max-width: 330px;
+        @include screen(950px) {
+            max-width: none;
+        }
+        &-title{
+            font-size: 22px;
+            font-weight: bold;
+            @include screen(480px) {
+                font-size: 20px;
+            }
+        }
+        &-descr{
+            font-size: 18px;
+            font-family: 'lato_regular';
+        }
+    }
+    &__icon{
+        display: inline-block;
+        background: no-repeat url('../images/sprite/sprite.png');
+        &-wrapper{
+            width: 72px;
+            height: 56px;
+            text-align: center;
+            flex: 1 0 auto;
+        }
+        &--1{
+            @include size(44px);
+            background-position: -295px -147px;
+        }
+        &--2{
+            width: 60px;
+            height: 56px;
+            background-position: -228px -78px;
+        }
+        &--3{
+            width: 44px;
+            height: 56px;
+            background-position: -82px -72px;
+        }
+        &--4{
+            width: 47px;
+            height: 55px;
+            background-position: -155px -72px;
+        }
+        &--5{
+            width: 71px;
+            height: 39px;
+            background-position: -72px -209px;
+        }
+        &--6{
+            width: 56px;
+            height: 36px;
+            background-position: -148px -209px;
+        }
+    }
+}

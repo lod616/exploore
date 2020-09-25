@@ -1,0 +1,19 @@
+.pack-s{
+    background: center / cover no-repeat url('../images/content/pack-bg.jpg');
+    padding: 70px 0 120px 0;
+}
+
+.pack{
+    align-items: center;
+    display: flex;
+    @include screen(600px) {
+        flex-direction: column;
+        & > * {
+        margin-bottom: 30px;
+        &:first-child {margin-top: 0;}
+        &:last-child {margin-bottom: 0;}}
+    }
+    &__header{
+        margin-bottom: 70px;
+    }
+}

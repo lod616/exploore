@@ -1,0 +1,113 @@
+.contact-s{
+    padding-bottom: 70px;
+}
+
+.contact-top{
+    background: center / cover no-repeat url('../images/content/contact-bg.jpg');
+    padding: 130px 0 200px 0;
+    position: relative;
+    margin-bottom: 80px;
+    &__header{
+        color: $white;
+        margin-bottom: 80px;
+    }
+    &__icon{
+        position: absolute;
+        bottom: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+        &-location{
+            width: 120px;
+            height: 175px;
+        }
+    }
+}
+
+.contact-connection{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 110px;
+    & > * {
+    margin-bottom: 20px;
+    &:first-child {margin-top: 0;}
+    &:last-child {margin-bottom: 0;}}
+    &__item{
+        display: flex;
+        width: 100%;
+        max-width: 250px;
+        & > * {
+            &:not(:last-child) {margin-right: 20px;}}
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        &-title{
+            font-family: 'lato_bold';
+            text-transform: uppercase;
+        }
+    }
+    &__icon{
+        &-wrapper{
+            @include size(54px);
+            text-align: center;
+        }
+        &-email{
+            width: 54px;
+            height: 42px;
+        }
+        &-phone{
+            width: 36px;
+            height: 45px;
+        }
+        &-map{
+            width: 52px;
+            height: 54px;
+        }
+    }
+}
+
+.contact-social{
+    &__list{
+        display: flex;
+        justify-content: center;
+        & > * {
+            &:not(:last-child) {margin-right: 30px;}}
+        &-block{
+            display: flex;
+            @include screen(950px) {
+                flex-direction: column;
+                & > * {
+                margin-bottom: 20px;
+                &:first-child {margin-top: 0;}
+                &:last-child {margin-bottom: 0;}}
+            }
+        }
+    }
+    &__item{
+        background: no-repeat url(../images/sprite/sprite.png);
+        &:not(:last-child) {margin-right: 30px;}
+        @include size(68px);
+        &--fc{
+            background-position: -72px -137px;
+        }
+        &--g{
+            background-position-y: -65px;
+        }
+        &--vk{
+            background-position-x: -82px;
+        }
+        &--yt{
+            background-position: -145px -137px;
+        }
+        &--in{
+            background-position-x: -155px;
+        }
+        &--dg{
+            background-position-y: -137px;
+        }
+        &--xz{
+            background-position-y: -208px;
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.offer-s{
+    background: left / auto no-repeat url('../images/content/offer-bg.jpg');
+    padding-right: 170px;
+    height: 800px;
+    display: flex;
+    justify-content: flex-end;
+    @include screen(950px) {
+        padding: 0 15px 0 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+.offer-price{
+    width: 100%;
+    max-width: 600px;
+    max-height: 440px;
+    padding: 35px 40px;
+    margin-top: 12%;
+    border-radius: 13px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.28);
+    background-color: $white;
+    & > * {
+    margin-bottom: 25px;
+    &:first-child {margin-top: 0;}
+    &:last-child {margin-bottom: 0;}}
+    @include screen(950px) {margin-top: 0;}
+    @include screen(600px) {
+        padding: 25px;
+        max-height: none;
+    }
+    &__header{
+        display: flex;
+        flex-direction: column;
+    }
+    &__services{
+        align-items: center;
+        display: flex;
+        & > * {
+            &:not(:last-child) {
+                margin-right: 60px;
+                @include screen(600px) {
+                    margin-right: 30px;
+                }
+            }}
+        &-item{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+        &-icon{
+            background: no-repeat url('../images/sprite/sprite.png');
+            display: inline-block;
+            &--flight{
+                @include size(44px);
+                background-position: -295px -147px;
+            }
+            &--hotel{
+                width: 51px;
+                height: 47px;
+                background-position-x: -295px;
+            }
+            &--car{
+                width: 54px;
+                height: 43px;
+                background-position-y: -281px;
+            }
+        }
+        &-text{
+            font-size: 20px;
+            font-family: 'montserrat_medium';
+            letter-spacing: 0.21px;
+            @include screen(600px) {
+                font-size: 17px;
+            }
+        }
+    }
+    &__bottom{
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 50px;
+        font-family: 'montserrat_black';
+        letter-spacing: 0.21px;
+        & > * {
+            &:not(:last-child) {margin-right: 50px;}}
+    }
+}

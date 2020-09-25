@@ -1,0 +1,95 @@
+.trusted-info-s{
+    padding: 80px 0 30px 0;
+}
+.trusted-info{
+    display: flex;
+    @include screen(950px) {
+        flex-direction: column;
+    }
+    & > * {
+        &:not(:last-child) {margin-right: 80px;}}
+    &__image{
+        @include screen(950px) {
+            order: 2;
+        }
+    }
+    &__right{
+        @include screen(950px) {
+            order: 1;
+        }
+        & > * {
+        margin-bottom: 50px;
+        &:first-child {margin-top: 0;}}
+    }
+    &__header{
+        & > * { text-align: left; }
+    }
+    &__services{
+        border: 2px solid #00a4ff;
+        display: flex;
+        width: 100%;
+        max-width: 700px;
+        @include screen(600px) {
+            flex-direction: column;
+        }
+        &-item{
+            width: 100%;
+            align-items: center;
+            display: flex;
+            padding: 22px 0;
+            & > * {
+                &:not(:last-child) {margin-right: 25px;}}
+            &--flight{
+                background-color: #00a4ff;
+                max-width: 225px;
+                padding-left: 30px;
+                @include screen(600px) {
+                    max-width: none;
+                }
+                .trusted-info__services-text{ color: $white; }
+            }
+            &--cub{
+                background-color: #e4e4e4;
+                max-width: 260px;
+                clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 9% 50%, 0% 0%);
+                margin-left: -24px;
+                padding-left: 50px;
+                @include screen(600px) {
+                    clip-path: none;
+                    padding-left: 30px;
+                    max-width: none;
+                    margin-left: auto;
+                }
+            }
+            &--hotel{
+                padding-left: 30px;
+            }
+        }
+        &-text{
+            font-size: 22px;
+            font-family: 'montserrat_medium';
+        }
+        &-icon{
+            display: inline-block;
+            background: no-repeat url('../images/sprite/sprite.png');
+            &--1{
+                @include size(35px);
+                background-position: -295px -196px;
+            }
+            &--2{
+                width: 51px;
+                height: 40px;
+                background-position: -295px -102px;
+            }
+            &--3{
+                width: 48px;
+                height: 45px;
+                background-position: -295px -52px;
+            }
+        }
+    }
+    &__descr{
+        width: 100%;
+        max-width: 630px;
+    }
+}
